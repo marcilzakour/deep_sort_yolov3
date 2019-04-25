@@ -35,8 +35,10 @@ def main(yolo):
     tracker = Tracker(metric)
 
     writeVideo_flag = True 
-    
-    video_capture = cv2.VideoCapture(0)
+    if len(sys.argv) > 1:
+       video_capture = cv2.VideoCapture(sys.argv[1])
+    else: 
+       video_capture = cv2.VideoCapture(0)
 
     if writeVideo_flag:
     # Define the codec and create VideoWriter object
