@@ -36,6 +36,7 @@ def main(yolo):
 
     writeVideo_flag = True 
     if len(sys.argv) > 1:
+       print("##Capturing Vedio from URL##")
        video_capture = cv2.VideoCapture(sys.argv[1])
     else: 
        video_capture = cv2.VideoCapture(0)
@@ -107,9 +108,9 @@ def main(yolo):
 
     video_capture.release()
     if writeVideo_flag:
+    if writeVideo_flag:
         out.release()
         list_file.close()
     cv2.destroyAllWindows()
 
 if __name__ == '__main__':
-    main(YOLO())
